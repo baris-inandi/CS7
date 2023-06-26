@@ -1,0 +1,40 @@
+21. (0 points)
+Shared. (https://scratch.mit.edu/projects/869586656)
+
+
+22. (1 point) In a short paragraph, tell us what your project does (or how to use it). In one or more longer paragraphs, explain how your project works, noting the purpose of each sprite and script. Alternatively, use the new “commenting” feature of Scratch and incorporate typed comments into your actual scripts
+
+This project is a remake of the classic game pong. It is a game for two players where the players try to use their paddles to hit a ball back and forth. Player 1 uses the W and S keys to move their paddles up and down. Player 2 uses the up/down arrow keys to move their paddle up and down.
+
+There are six sprites in this game: left/right paddles, left/right triggers, the ball, and the title screen.
+
+The title screen is the simplest. The game uses a variable called `gamestopped`. If this variable is set to “true”, the game resets and displays the title screen. If it is set to “false”, the game continues. The role of the title screen is to set `gamestopped` to false when the player presses the spacebar, hence starting (or restarting) the game.
+
+The paddles only have one script. If the game is continuing, this script moves the paddle sprite up/down when the corresponding keys are pressed. The paddles’ speeds are dependent by the ball’s speed.
+
+
+The ball’s purpose is to bounce when it hits a paddle and stop the game when it hits a “trigger”, which are positioned behind the paddles and cover up all the vertical space in the stage. It adds a bit of randomness to each bounce, slightly changing its angle to make the game a little bit harder. The ball gets faster over time (see the custom block “set ball speed `n`). It also plays a sound on each bounce.
+
+
+23. (1 point) Roughly how much time did you spend implementing your .sb3 project?
+It took around 2 hours.
+
+
+24. (1 point) Did you base .sb3 on some project that came with Scratch or that was demonstrated in lecture? If so, which one?
+No.
+
+
+25. (1 point) In one or two short paragraphs, tell us what you think of Scratch. Do you like it? What’s good about it? What’s bad about it? Did you enjoy implementing .sb3?
+I think it is a great tool to get started with programming. It definitely helps teach how to think like a programmer. I haven’t used Scratch in the past 3-4 years so getting used to it was much harder than I expected. However, once I got the hang of it, I started to enjoy implementing my project.
+
+
+26. (1 point) In a short paragraph, what (if anything) did you learn by using Scratch?
+I believe I have enhanced my understanding of game design by learning about various concepts. These include sprites, which have their own encapsulated scripts and variables, as well as costumes that can alter the appearance of the sprites. These concepts have improved my approach to game design.
+
+
+27. (1 point) 
+In implementing .sb3, with what concepts or implementation details did you 
+struggle? Why?
+I struggled with the concept of “custom blocks”. Not being able to “return” a value confused me at first. To achieve the same thing, I had to create a variable first, and then alter it within the custom block.
+
+I also struggled with simulate physics. To simulate the movement of the ball, I had to use the “rotate” and “move” blocks. To simulate velocity, I had to increase/decrease the parameter of the “move” block. I stored the speed in a variable named `speed` and increased it over time.
