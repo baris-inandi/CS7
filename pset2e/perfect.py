@@ -2,6 +2,7 @@ import math
 
 
 def divisors(n) -> list[int]:
+    # returns a list of divisors of n, except n
     out = []
     for i in range(1, int(math.sqrt(n)) + 1):
         if n % i == 0:
