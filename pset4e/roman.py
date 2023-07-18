@@ -1,6 +1,3 @@
-from cgi import test
-from math import log10
-
 ROMAN_NUMERALS = {
     "I": 1,
     "V": 5,
@@ -55,8 +52,6 @@ def is_valid(roman_numeral):
         if n > c and (
             # only subtract one number from another
             (count > 1)
-            # only subtract powers of ten (not V,D,L)
-            or (log10(c) % 1 != 0)
             # cannot subtract a number that is twice as big (e.g. )
             or (n - c == c)
             # cannot subtract a number from one that is more than 10 times greater (e.g. 99 is XCIX, not IC)
