@@ -41,7 +41,7 @@ def is_valid(roman_numeral):
     # if there is only one character, it is always valid
     if len(roman_numeral) == 1:
         return True
-    # if there are two characters,the first must never be smaller than the second
+    # if length != 2, the first must never be smaller than the second
     if len(roman_numeral) != 2 and (
         ROMAN_NUMERALS[roman_numeral[0]] < ROMAN_NUMERALS[roman_numeral[1]]
     ):
