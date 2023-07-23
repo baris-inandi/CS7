@@ -1,14 +1,17 @@
 def selection_sort(data):
-    """
-    Sorts the list data using selection sort. Returns Nothing.
-    """
-    # Add your code here
+    for i in range(len(data) - 1):
+        min_index = i
+        for j in range(i + 1, len(data)):
+            if data[j] < data[min_index]:
+                min_index = j
+        data[i], data[min_index] = data[min_index], data[i]
 
 
 def main():
-    # Add your solution to the problem that makes use of
-    # the above to sort a list.
-    print("Remove me and add your code!")
+    data = [5, 3, 1, 2, 4]
+    print(data)
+    selection_sort(data)
+    print(data)
 
 
 if __name__ == "__main__":

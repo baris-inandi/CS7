@@ -1,12 +1,12 @@
-"""Add your solution to the problem 'courses' here."""
-
-
 def total_homeworks(courses):
     """Takes the a dictionary of courses as students is taking
     and returns the total number of homeworks they have.
     Must use a for loop
     """
-    # Add your code here.
+    total = 0
+    for course in courses.values():
+        total += course["num_homeworks"]
+    return total
 
 
 def total_homeworks2(courses):
@@ -14,7 +14,7 @@ def total_homeworks2(courses):
     and returns the total number of homeworks they have.
     Must use a list comprehension and sum.
     """
-    # Add your code here.
+    return sum([course["num_homeworks"] for course in courses.values()])
 
 
 def main():
@@ -44,8 +44,8 @@ def main():
             "num_exams": 2,
         },
     }
-    print("total_homeworks: ", total_homeworks(COURSES))
-    print("total_homeworks2: ", total_homeworks2(COURSES))
+    print("total_homeworks:", total_homeworks(COURSES))
+    print("total_homeworks2:", total_homeworks2(COURSES))
 
 
 if __name__ == "__main__":

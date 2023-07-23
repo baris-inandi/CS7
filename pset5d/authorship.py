@@ -1,6 +1,5 @@
-"""Add your solution to the problem 'authorship' here."""
-
-# make sure to import your data file here
+from collections import defaultdict
+from romeo_and_juliet_data import lines as rj
 
 
 def word_length_histogram(text_list):
@@ -13,13 +12,19 @@ def word_length_histogram(text_list):
     should return the dictionary
         { 6 : 3, 2 : 1, 4 : 1 }
     """
-    # Add your code here.
+    out = defaultdict(int)
+    for word in [word.replace("'", "") for line in text_list for word in line.split()]:
+        out[len(word)] += 1
+    return dict(out)
 
 
 def main():
-    # Add your solution to the problem that makes use of the above to
-    # print out the word length frequency table described in the pset.
-    print("Remove me and add your code!")
+    data = word_length_histogram(rj)
+    total = sum(data.values())
+    for key in sorted(data.keys()):
+        print(
+            f"Proportion of {key}-letter words: {data[key] / total * 100:.2f}% ({data[key]} words)"
+        )
 
 
 if __name__ == "__main__":
